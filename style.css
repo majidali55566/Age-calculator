@@ -112,6 +112,7 @@ input[type=number]{
 @media(min-width:768px){
     input[type=number]{
         max-width: 10rem;
+        font-size: var(--fs-800);
         padding: 1rem 1rem;
     }
 }
@@ -167,7 +168,12 @@ button{
     border: none;
 
 }
-
+@media (min-width: 768px){
+  button{
+    width: 6rem;
+    height: 6rem;
+  }
+}
 #down-arrow{
     content: url('/icons/down-arrow.png');
     max-width: 2rem;
@@ -209,7 +215,7 @@ button{
     padding-inline: 2rem;
   }
   .date-result-container{
-    font-size: 4rem;
+    font-size: 8rem;
     line-height: 1;
   }
 }
@@ -265,6 +271,12 @@ hr{
   height: .8rem;
   background: var(--clr-primary);
   transform: skew(-20deg);
+}
+@media (min-width:768px){
+  .parallelogram{
+    width: 4rem;
+    height: 1.5rem;
+  }
 }
 
 .color-primary{
