@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root{
+
+
+    --clr-primary: hsl(259, 100%, 65%);
+    
+    --clr-light-red:hsl(0, 100%, 67%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200:hsl(0, 0%, 94%);
+    --clr-neutral-400:hsl(0, 0%, 86%);
+    --clr-neutral-800:hsl(0, 1%, 44%);
+    --clr-neutral-900:hsl(0, 0%, 8%);
+
+    --fs-400:1rem;
+    --fs-500:1.25rem;
+    --fs-600:1.5rem;
+    --fs-800:1.75rem;
+
+    --fw-400:400;
+    --fw-700:700;
+    --fw-800:800;
+
+    --ff: 'Poppins', sans-serif;
+
+}
+/* CSS RESET BY JOSH */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* General styling */
+
+body{
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-900);
+    font-family: var(--ff);   
+}
+main{
+    display: grid;
+    place-content: center;
+}
+@media (min-width: 375px){
+    main{
+      height: 100vh;
+    }
+}
+
+
+input[type=number]{
+    font-size:var(--fs-500);
+    font-weight: 700;
+    padding: .6rem .7rem ;
+    max-width: 5rem;
+    
+    border-radius: .5rem;
+}
+@media(min-width:768px){
+    input[type=number]{
+        max-width: 10rem;
+        padding: 1rem 1rem;
+    }
+}
+input[type=number]:focus{
+        border:1px solid var(--clr-primary);
+        outline: none;     
+}   
+.invalid-input{
+  border: 1px solid var(--clr-light-red);
+}
+.valid-input{
+  border: 1px solid var(--clr-neutral-400);
+}
+
+.date-input-container span{
+ font-size: .5rem;
+ margin: .5rem;
+ font-style: italic;
+ color: var(--clr-light-red)
+}
+@media (min-width:768px){
+  .date-input-container span{
+    font-size: .9rem;
+  }
+}
+Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+label{
+    font-size:.7rem;
+    letter-spacing: .3em;
+    color: var(--clr-neutral-800);
+}
+
+button{
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--clr-neutral-900);
+    outline: none;
+    color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-900);
+    border-radius: 100%;
+    background-color: var(--clr-primary);
+    border: none;
+
+}
+
+#down-arrow{
+    content: url('/icons/down-arrow.png');
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+/* Utilities */
+
+.flex-group{
+    display: flex;
+    flex-direction: column;
+}
+.grid-flow{
+    display: grid;
+}
+
+
+
+.age-determinant-container{
+    margin-block: 2rem;
+    padding-block: 2.5rem;
+    padding-inline: 1.5rem;
+    border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+    display: grid;
+    gap: 4rem;
+    background-color: var(--clr-neutral-100);
+}
+
+.date-result-container{
+    color: var(--clr-neutral-900);
+    font-size:3rem;
+    font-weight: var(--fw-800);
+    font-style: italic;
+    line-height: 1.4;
+}
+@media (min-width: 768px){
+  .age-determinant-container{
+    gap: 3rem;
+    padding-inline: 2rem;
+  }
+  .date-result-container{
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+.date-input-container{
+  display:flex;
+        gap:1rem;
+}
+@media (min-width:768px) {
+ 
+  .date-input-container{
+    gap: 2rem;
+  }
+  
+}
+
+
+hr{
+    width: 100%; 
+    opacity: .4;
+}
+.hr-button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.placement{
+    position: absolute;
+    align-self: center;
+}
+@media (min-width: 375px){
+  .placement{
+    position:absolute;
+    align-self: flex-end;
+    
+  }
+}
+@media(min-width:768px){
+  .hr-button-container{
+    width: 43rem;
+  }
+}
+
+.results{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.parallelogram {
+  width: 2rem;
+  height: .8rem;
+  background: var(--clr-primary);
+  transform: skew(-20deg);
+}
+
+.color-primary{
+  color: var(--clr-primary);
+}
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Age calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="age-determinant-container">
+        <div class="date-input-container grid-flow">
+          <div class="flex-group">
+            <label for="day">DAY</label>
+            <input
+              class="valid-input"
+              type="number"
+              id="day"
+              placeholder="DD"
+            />
+            <span id="day-validation-message"></span>
+          </div>
+          <div class="flex-group">
+            <label for="month">MONTH</label>
+            <input
+              type="number"
+              id="month"
+              placeholder="MM"
+              class="valid-input"
+            />
+            <span id="month-validation-message"></span>
+          </div>
+          <div class="flex-group">
+            <label for="year">YEAR</label>
+            <input
+              class="valid-input"
+              type="number"
+              id="year"
+              placeholder="YYYY"
+            />
+            <span id="year-validation-message"></span>
+          </div>
+        </div>
+        <div class="hr-button-container">
+          <hr />
+          <button class="placement" id="convert-value">
+            <span id="down-arrow"></span>
+          </button>
+        </div>
+        <div class="date-result-container" id="result-container">
+          <div class="results" id="years-result">
+            <p>years</p>
+          </div>
+          <div class="results" id="months-result">
+            <p>months</p>
+          </div>
+          <div class="results" id="days-result">
+            <p>days</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
